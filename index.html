@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>David Ghent Landscape Photography</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheets/styles.css"/>
+</head>
+
+<body>
+
+	<div id="about-overlay" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+	    <h1><span class="bold">Hello</span>, I'm David.<br/>
+				I'm a <a href="#"><span class="italic">digital product designer</span></a> by trade, but in my travels I've found the <a href="#">joy of composition</a> through landscape photography. Each photo in this showcase represents the joy and wonder I feel from exploring a new place.</h1>
+	  </div>
+	</div>
+
+  <section id="info">
+    <a href="#" onclick="openNav()"><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.77 23.77"><defs><style>.cls-1{fill:none;stroke:#FE6467;stroke-miterlimit:10;stroke-width:0.4px;}</style></defs><title>logo</title><circle class="cls-1" cx="11.89" cy="11.89" r="11.79"/></svg></a>
+  </section>
+
+  <section id="content">
+    <img src="img/delores-park-san-francisco.jpg" />
+    <h2><a href="#">Misson Delores Park, San Francisco</a></h2>
+    <img src="img/grizzly-peak-trail-california.jpg" />
+    <h2><a href="#">Grizzy Peak trail, San Francisco</a></h2>
+    <img src="img/hollywood-sign-LA.jpg" />
+    <h2><a href="#">Hollywood, Los Angeles</a></h2>
+    <img src="img/salvation-mountain-california.jpg" />
+    <h2><a href="#">Salvation Mountain, California</a></h2>
+  </section>
+
+
+	<script>
+	function openNav() {
+	    document.getElementById("about-overlay").style.width = "100%";
+	}
+
+	function closeNav() {
+	    document.getElementById("about-overlay").style.width = "0%";
+	}
+	</script>
+
+</body>
+</html>

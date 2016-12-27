@@ -1,0 +1,163 @@
+
+// Color
+$blue: #0099da;
+$medium_grey: #C1C3C3;
+$green: #417505;
+
+$break: 800px;
+
+// 8 pix sizes
+$xxs: 4px;
+$xs: 8px;
+$s: 16px;
+$m: 32px;
+$l: 40px;
+$xl: 64px;
+
+// Typography
+$regular: 400;
+$bold: 600;
+$black: 900;
+
+// Testing Colors
+$testing_color_1: rgba(255,130,130,0.56); //red
+$testing_color_2: rgba(255,200,143,0.53); //orange
+$testing_color_3: rgba(167,199,255,0.50); //blue
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-weight: $regular;
+  display: flex;
+  flex-direction: row;
+  max-width: 1600px;
+  margin: auto;
+  @media (max-width: $break) {
+    // background-color: $testing_color_3;
+    flex-direction: column;
+  }
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 32px;
+}
+
+h1 {
+  font-size: $l;
+  font-weight: $regular;
+  margin-bottom: $s;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: $s;
+  font-weight: 400;
+  margin-top: $s;
+  margin-bottom: $s;
+  padding-left: $s;
+  border-left: 1px solid #B6B6B6;
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    color: #FE6467;
+  }
+}
+
+p {
+  font-size: $xs;
+  margin-bottom: $xs;
+}
+
+.italic {
+  font-style: italic;
+}
+.italic-bold {
+  font-style: italic;
+  font-weight: $bold;
+}
+.bold {
+  font-weight: $bold;
+}
+
+#info {
+  width: 64px;
+  height: 50px;
+  padding: $m + $s;
+  // border: 1px solid $testing_color_1;
+  svg {
+    position: fixed;
+    height: 60px;
+  }
+  @media (max-width: $break) {
+    padding: 0;
+    // background-color: $testing_color_2;
+    svg {
+      height: 30px;
+      padding: $s;
+    }
+  }
+}
+
+#content {
+  // border: 1px solid $testing_color_2;
+  padding: $s $m $s 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(71,137,159, 0.9);
+    overflow-x: hidden;
+    // transition: 0.1s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 80%;
+    // text-align: center;
+    // margin-top: 16px;
+    // margin-right: 64px;
+    padding: $l;
+    h1 {
+      font-size: 120px;
+      color: #fff;
+      text-align: left;
+    }
+}
+
+.overlay a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FE6467;
+    // display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #fff;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 5%;
+    right: $xl;
+    font-size: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
