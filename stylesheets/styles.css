@@ -13,6 +13,9 @@ img {
   width: 100%;
   height: auto;
   margin-top: 32px; }
+  @media (max-width: 800px) {
+    img {
+      margin-top: 4px; } }
 
 h1 {
   font-size: 40px;
@@ -20,15 +23,13 @@ h1 {
   margin-bottom: 16px; }
 
 h2 {
-  font-family: 'Lora', serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 100;
   margin-top: 16px;
-  margin-bottom: 16px;
-  padding-left: 16px;
-  border-left: 1px solid #B6B6B6; }
+  margin-bottom: 16px; }
   h2 a {
-    color: #333;
+    color: #3B0001;
     text-decoration: none; }
   h2 a:hover, h2 a:focus {
     color: #FE6467; }
@@ -37,32 +38,51 @@ p {
   font-size: 8px;
   margin-bottom: 8px; }
 
-.italic {
-  font-style: italic; }
+#circle {
+  animation: red 3s infinite alternate; }
 
-.italic-bold {
-  font-style: italic;
-  font-weight: 600; }
-
-.bold {
-  font-weight: 600; }
+@keyframes red {
+  from {
+    fill: white; }
+  to {
+    fill: #FE6467; } }
+#about-mobile {
+  visibility: hidden;
+  width: 0;
+  font-size: 124px;
+  color: #47899f; }
+  @media (max-width: 800px) {
+    #about-mobile {
+      padding: 32px 32px 32px 32px;
+      visibility: visible;
+      width: auto; }
+      #about-mobile a {
+        font-family: "Playfair Display script=all rev=1", "Adobe Blank";
+        font-style: italic;
+        font-weight: 900;
+        text-decoration: none;
+        color: #FE6467; }
+      #about-mobile h1 {
+        margin: 0; } }
 
 #info {
-  width: 64px;
-  height: 50px;
-  padding: 48px; }
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 112px; }
   #info svg {
-    position: fixed;
-    height: 60px; }
+    position: fixed; }
   @media (max-width: 800px) {
     #info {
-      padding: 0; }
-      #info svg {
-        height: 30px;
-        padding: 16px; } }
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      padding: 0; } }
 
 #content {
-  padding: 16px 32px 16px 0; }
+  padding: 0 32px 16px 0; }
+  @media (max-width: 800px) {
+    #content {
+      padding: 0 32px 0 32px; } }
 
 .overlay {
   height: 100%;
@@ -78,34 +98,50 @@ p {
   position: relative;
   top: 5%;
   width: 80%;
-  padding: 40px; }
+  margin-top: 0px;
+  padding: 0 40px 40px 40px; }
   .overlay-content h1 {
-    font-size: 120px;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 156px;
+    line-height: 172px;
     color: #fff;
     text-align: left; }
+    @media (max-width: 1000px) {
+      .overlay-content h1 {
+        font-size: 64px;
+        line-height: 72px; } }
+    @media (max-width: 460px) {
+      .overlay-content h1 {
+        font-size: 36px;
+        line-height: 48px; } }
 
 .overlay a {
+  font-family: "Playfair Display script=all rev=1", "Adobe Blank";
+  font-size: 184px;
+  font-style: italic;
+  font-weight: 900;
   text-decoration: none;
-  font-weight: bold;
   color: #FE6467;
   transition: 0.3s; }
+  @media (max-width: 1000px) {
+    .overlay a {
+      font-size: 72px; } }
+  @media (max-width: 460px) {
+    .overlay a {
+      font-size: 40px; } }
 
 .overlay a:hover, .overlay a:focus {
-  color: #fff; }
+  color: #FF9698; }
 
 .overlay .closebtn {
   position: absolute;
   top: 5%;
   right: 64px;
-  font-size: 50px; }
-
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px; }
-
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px; } }
+  font-size: 50px;
+  font-style: normal; }
+  @media (max-width: 800px) {
+    .overlay .closebtn {
+      visibility: hidden; } }
 
 /*# sourceMappingURL=styles.css.map */

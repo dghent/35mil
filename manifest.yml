@@ -1,6 +1,6 @@
 ---
 applications:
-- name: 35mil
+- name: black-and-white-photos
   memory: 512M
   instances: 1
   # random-route: true

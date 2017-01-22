@@ -10,6 +10,7 @@ $break: 800px;
 $xxs: 4px;
 $xs: 8px;
 $s: 16px;
+$xm: 24px;
 $m: 32px;
 $l: 40px;
 $xl: 64px;
@@ -32,7 +33,6 @@ body {
   max-width: 1600px;
   margin: auto;
   @media (max-width: $break) {
-    // background-color: $testing_color_3;
     flex-direction: column;
   }
 
@@ -41,7 +41,10 @@ body {
 img {
   width: 100%;
   height: auto;
-  margin-top: 32px;
+  margin-top: $m;
+  @media ( max-width: $break ) {
+    margin-top: $xxs;
+  }
 }
 
 h1 {
@@ -51,15 +54,13 @@ h1 {
 }
 
 h2 {
-  font-family: 'Lora', serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: $s;
-  font-weight: 400;
+  font-weight: 100;
   margin-top: $s;
   margin-bottom: $s;
-  padding-left: $s;
-  border-left: 1px solid #B6B6B6;
   a {
-    color: #333;
+    color: #3B0001;
     text-decoration: none;
   }
   a:hover, a:focus {
@@ -72,39 +73,63 @@ p {
   margin-bottom: $xs;
 }
 
-.italic {
-  font-style: italic;
-}
-.italic-bold {
-  font-style: italic;
-  font-weight: $bold;
-}
-.bold {
-  font-weight: $bold;
+#circle {
+  animation: red 3s infinite alternate;
 }
 
-#info {
-  width: 64px;
-  height: 50px;
-  padding: $m + $s;
-  // border: 1px solid $testing_color_1;
-  svg {
-    position: fixed;
-    height: 60px;
+@keyframes red {
+  from {
+    fill: white;
   }
-  @media (max-width: $break) {
-    padding: 0;
-    // background-color: $testing_color_2;
-    svg {
-      height: 30px;
-      padding: $s;
+  to {
+    fill: #FE6467;
+  }
+}
+
+
+#about-mobile {
+  visibility: hidden;
+  width: 0;
+  font-size: 124px;
+  color: rgba(71,137,159, 1);
+  @media ( max-width: $break ) {
+    a {
+      font-family: "Playfair Display script=all rev=1", "Adobe Blank";
+      font-style: italic;
+      font-weight: 900;
+      text-decoration: none;
+      color: #FE6467;
+    }
+    padding: $m $m $m $m;
+    visibility: visible;
+    width: auto;
+    h1 {
+      margin: 0;
     }
   }
 }
 
+#info {
+  margin-top: $m;
+  margin-left: $m;
+  margin-right: 80px + $m;
+  svg {
+    position: fixed;
+  }
+  @media ( max-width: $break ) {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+}
+
+
 #content {
-  // border: 1px solid $testing_color_2;
-  padding: $s $m $s 0;
+  padding: 0 $m $s 0;
+  @media ( max-width: $break ) {
+    padding: 0 $m 0 $m;
+  }
 }
 
 .overlay {
@@ -123,27 +148,45 @@ p {
     position: relative;
     top: 5%;
     width: 80%;
-    // text-align: center;
-    // margin-top: 16px;
-    // margin-right: 64px;
-    padding: $l;
+    margin-top: 0px;
+    padding: 0 $l $l $l;
     h1 {
-      font-size: 120px;
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 156px;
+      line-height: 172px;
       color: #fff;
       text-align: left;
+      @media ( max-width: 1000px ) {
+        font-size: 64px;
+        line-height: 72px;
+      }
+      @media ( max-width: 460px ) {
+        font-size: 36px;
+        line-height: 48px;
+      }
     }
 }
 
 .overlay a {
+    font-family: "Playfair Display script=all rev=1", "Adobe Blank";
+    font-size: 184px;
+    font-style: italic;
+    font-weight: 900;
     text-decoration: none;
-    font-weight: bold;
     color: #FE6467;
     // display: block;
     transition: 0.3s;
+    @media ( max-width: 1000px ) {
+      font-size: 72px;
+    }
+    @media ( max-width: 460px ) {
+      font-size: 40px;
+    }
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: #fff;
+    color: #FF9698;
 }
 
 .overlay .closebtn {
@@ -151,13 +194,8 @@ p {
     top: 5%;
     right: $xl;
     font-size: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+    font-style: normal;
+    @media ( max-width: $break ) {
+      visibility: hidden;
+    }
 }
