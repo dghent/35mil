@@ -75,17 +75,20 @@ p {
 
 #circle {
   animation: red 3s infinite alternate;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes red {
-  from {
+  0% {
     fill: white;
   }
-  to {
+  50% {
     fill: #FE6467;
   }
+  90% {
+    fill: white;
+  }
 }
-
 
 #about-mobile {
   visibility: hidden;
