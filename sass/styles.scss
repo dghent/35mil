@@ -1,10 +1,8 @@
 
 // Color
-$blue: #0099da;
+$blue: rgba(71, 137, 159, 1);
 $medium_grey: #C1C3C3;
 $green: #417505;
-
-$break: 800px;
 
 // 8 pix sizes
 $xxs: 4px;
@@ -28,29 +26,56 @@ $testing_color_3: rgba(167,199,255,0.50); //blue
 body {
   font-family: 'Playfair Display', serif;
   font-weight: $regular;
-  display: flex;
-  flex-direction: row;
-  max-width: 1600px;
-  margin: auto;
-  @media (max-width: $break) {
-    flex-direction: column;
-  }
-
+  margin: 0;
 }
 
 img {
   width: 100%;
   height: auto;
   margin-top: $m;
-  @media ( max-width: $break ) {
-    margin-top: $xxs;
-  }
+  // @media ( max-width: $break ) {
+  //   margin-top: $xxs;
+  // }
 }
 
 h1 {
-  font-size: $l;
-  font-weight: $regular;
-  margin-bottom: $s;
+  font-weight: 400;
+  font-size: 124px;
+  line-height: 164px;
+  color: white;
+  text-align: left;
+  padding-right: 30%;
+  @media ( max-width: 1500px ) {
+    padding-right: 0;
+  }
+  @media ( max-width: 1000px ) {
+    font-size: 64px;
+    line-height: 84px;
+  }
+  @media ( max-width: 600px ) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  a {
+    font-family: "Playfair Display script=all rev=1", "Adobe Blank";
+    font-style: italic;
+    font-size: 142px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #FE6467;
+    @media ( max-width: 1000px ) {
+      font-size: 72px;
+      line-height: 72px;
+    }
+    @media ( max-width: 600px ) {
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+  a:hover, a:focus {
+    color: #FA9B9D;
+    transition: 0.3s;
+  }
 }
 
 h2 {
@@ -65,6 +90,7 @@ h2 {
   }
   a:hover, a:focus {
     color: #FE6467;
+    transition: 0.3s;
   }
 }
 
@@ -73,132 +99,13 @@ p {
   margin-bottom: $xs;
 }
 
-#circle {
-  animation: red 3s infinite alternate;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes red {
-  0% {
-    fill: white;
-  }
-  50% {
-    fill: #FE6467;
-  }
-  90% {
-    fill: white;
-  }
-}
-
-#about-mobile {
-  visibility: hidden;
-  width: 0;
+#about {
   font-size: 124px;
-  color: rgba(71,137,159, 1);
-  @media ( max-width: $break ) {
-    a {
-      font-family: "Playfair Display script=all rev=1", "Adobe Blank";
-      font-style: italic;
-      font-weight: 900;
-      text-decoration: none;
-      color: #FE6467;
-    }
-    padding: $m $m $m $m;
-    visibility: visible;
-    width: auto;
-    h1 {
-      margin: 0;
-    }
-  }
+  padding: $m $m $m $m;
+  width: auto;
+  background-color: $blue;
 }
-
-#info {
-  margin-top: $m;
-  margin-left: $m;
-  margin-right: 80px + $m;
-  svg {
-    position: fixed;
-  }
-  @media ( max-width: $break ) {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    padding: 0;
-  }
-}
-
 
 #content {
-  padding: 0 $m $s 0;
-  @media ( max-width: $break ) {
-    padding: 0 $m 0 $m;
-  }
-}
-
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(71,137,159, 0.9);
-    overflow-x: hidden;
-    // transition: 0.1s;
-}
-
-.overlay-content {
-    position: relative;
-    top: 5%;
-    width: 80%;
-    margin-top: 0px;
-    padding: 0 $l $l $l;
-    h1 {
-      margin-top: 0;
-      font-weight: 400;
-      font-size: 156px;
-      line-height: 172px;
-      color: #fff;
-      text-align: left;
-      @media ( max-width: 1000px ) {
-        font-size: 64px;
-        line-height: 72px;
-      }
-      @media ( max-width: 460px ) {
-        font-size: 36px;
-        line-height: 48px;
-      }
-    }
-}
-
-.overlay a {
-    font-family: "Playfair Display script=all rev=1", "Adobe Blank";
-    font-size: 184px;
-    font-style: italic;
-    font-weight: 900;
-    text-decoration: none;
-    color: #FE6467;
-    // display: block;
-    transition: 0.3s;
-    @media ( max-width: 1000px ) {
-      font-size: 72px;
-    }
-    @media ( max-width: 460px ) {
-      font-size: 40px;
-    }
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #FF9698;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 5%;
-    right: $xl;
-    font-size: 50px;
-    font-style: normal;
-    @media ( max-width: $break ) {
-      visibility: hidden;
-    }
+  padding: 0 $m $l $m;
 }

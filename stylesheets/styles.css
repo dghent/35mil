@@ -1,26 +1,49 @@
 body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  display: flex;
-  flex-direction: row;
-  max-width: 1600px;
-  margin: auto; }
-  @media (max-width: 800px) {
-    body {
-      flex-direction: column; } }
+  margin: 0; }
 
 img {
   width: 100%;
   height: auto;
   margin-top: 32px; }
-  @media (max-width: 800px) {
-    img {
-      margin-top: 4px; } }
 
 h1 {
-  font-size: 40px;
   font-weight: 400;
-  margin-bottom: 16px; }
+  font-size: 124px;
+  line-height: 164px;
+  color: white;
+  text-align: left;
+  padding-right: 30%; }
+  @media (max-width: 1500px) {
+    h1 {
+      padding-right: 0; } }
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 64px;
+      line-height: 84px; } }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 36px;
+      line-height: 48px; } }
+  h1 a {
+    font-family: "Playfair Display script=all rev=1", "Adobe Blank";
+    font-style: italic;
+    font-size: 142px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #FE6467; }
+    @media (max-width: 1000px) {
+      h1 a {
+        font-size: 72px;
+        line-height: 72px; } }
+    @media (max-width: 600px) {
+      h1 a {
+        font-size: 42px;
+        line-height: 48px; } }
+  h1 a:hover, h1 a:focus {
+    color: #FA9B9D;
+    transition: 0.3s; }
 
 h2 {
   font-family: 'Open Sans Condensed', sans-serif;
@@ -32,119 +55,20 @@ h2 {
     color: #3B0001;
     text-decoration: none; }
   h2 a:hover, h2 a:focus {
-    color: #FE6467; }
+    color: #FE6467;
+    transition: 0.3s; }
 
 p {
   font-size: 8px;
   margin-bottom: 8px; }
 
-#circle {
-  animation: red 3s infinite alternate;
-  animation-timing-function: ease-in-out; }
-
-@keyframes red {
-  0% {
-    fill: white; }
-  50% {
-    fill: #FE6467; }
-  90% {
-    fill: white; } }
-#about-mobile {
-  visibility: hidden;
-  width: 0;
+#about {
   font-size: 124px;
-  color: #47899f; }
-  @media (max-width: 800px) {
-    #about-mobile {
-      padding: 32px 32px 32px 32px;
-      visibility: visible;
-      width: auto; }
-      #about-mobile a {
-        font-family: "Playfair Display script=all rev=1", "Adobe Blank";
-        font-style: italic;
-        font-weight: 900;
-        text-decoration: none;
-        color: #FE6467; }
-      #about-mobile h1 {
-        margin: 0; } }
-
-#info {
-  margin-top: 32px;
-  margin-left: 32px;
-  margin-right: 112px; }
-  #info svg {
-    position: fixed; }
-  @media (max-width: 800px) {
-    #info {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-      padding: 0; } }
+  padding: 32px 32px 32px 32px;
+  width: auto;
+  background-color: #47899f; }
 
 #content {
-  padding: 0 32px 16px 0; }
-  @media (max-width: 800px) {
-    #content {
-      padding: 0 32px 0 32px; } }
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(71, 137, 159, 0.9);
-  overflow-x: hidden; }
-
-.overlay-content {
-  position: relative;
-  top: 5%;
-  width: 80%;
-  margin-top: 0px;
-  padding: 0 40px 40px 40px; }
-  .overlay-content h1 {
-    margin-top: 0;
-    font-weight: 400;
-    font-size: 156px;
-    line-height: 172px;
-    color: #fff;
-    text-align: left; }
-    @media (max-width: 1000px) {
-      .overlay-content h1 {
-        font-size: 64px;
-        line-height: 72px; } }
-    @media (max-width: 460px) {
-      .overlay-content h1 {
-        font-size: 36px;
-        line-height: 48px; } }
-
-.overlay a {
-  font-family: "Playfair Display script=all rev=1", "Adobe Blank";
-  font-size: 184px;
-  font-style: italic;
-  font-weight: 900;
-  text-decoration: none;
-  color: #FE6467;
-  transition: 0.3s; }
-  @media (max-width: 1000px) {
-    .overlay a {
-      font-size: 72px; } }
-  @media (max-width: 460px) {
-    .overlay a {
-      font-size: 40px; } }
-
-.overlay a:hover, .overlay a:focus {
-  color: #FF9698; }
-
-.overlay .closebtn {
-  position: absolute;
-  top: 5%;
-  right: 64px;
-  font-size: 50px;
-  font-style: normal; }
-  @media (max-width: 800px) {
-    .overlay .closebtn {
-      visibility: hidden; } }
+  padding: 0 32px 40px 32px; }
 
 /*# sourceMappingURL=styles.css.map */
